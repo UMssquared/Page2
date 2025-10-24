@@ -4,10 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+    <header>
+<br>
+<br>
+<br>
+ <!-- <p style="background-image: url('./Images/banner.png'); display: flex; justify-content: center; height: 200px; place-items: center; background-repeat: no-repeat; "></p> -->
+  <!-- Setting Row Buttons-->
+  <div class = "buttons-in-row">  
+<!-- First Button -->
+    <div class="dropdown">
+<button onclick="toggleDropdown('myDropdown')" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="https://umssquared.github.io/Page2/" target="_self">Page1</a>
+    <a href="#Page2">Page2</a>
+    <a href="#Page3">Page3</a>
+  </div>
+</div>
+<!-- Second button-->
+<div class = "dropdown">
+  <button onclick="toggleDropdown('dpdwn2')" class="dropbtn">Resources</button>
+  <div id="dpdwn2" class = "dropdown-content">
+    <a href="https://umanitoba.ca/science/" target="_blank">Faculty of Science </a>
+    <a href="https://umanitoba.ca/science/statistics" target="_blank">Department of Statistics</a>
+    <a href="https://www.umanitobassa.com/" target="_blank">Science Student Association</a>
+  </div>
+</div>
+
+<!-- Third Button (Scrolls to bottom of page where contact info will be) -->
+<a href="#Contacts" class = "a1">Contact Us</a>
+
+<a class = "a1", style = "width: 100%; ">Testing</a>
+
+</div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+//function myFunction() {
+  //document.getElementById("myDropdown").classList.toggle("show");
+//}
+
+function toggleDropdown(id) {
+  document.querySelectorAll('.dropdown-content').forEach(menu => {
+    if (menu.id !== id) menu.classList.remove('show');
+  });
+
+  
+  document.getElementById(id).classList.toggle('show');
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</header>
+<body style="background-color:#93d3f3; margin: 0;">
 <h1> UMs<sup>2</sup> </h1>
 <p> New page </p>
 </body>
+<footer>
+<h2 id="Contacts" style="padding: 0; margin: 10px;">Contact Us</h2>
+    <a href = "https://www.instagram.com/umstatisticsclub/" target="_blank" class = "a1" style = "margin:10px;">Instagram</a>
+    <a href = "https://discord.gg/6qaGYQzfBu" target="_blank"  class = "a1" style = "margin:10px;">Community Discord</a>
+    <a href = "mailto:UMs2@umanitoba.ca" target="_blank" class = "a1"  style = "margin:10px;">Email Us</a>
+<br>
+<br>
+</footer>
 
 </html> 
