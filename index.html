@@ -92,6 +92,90 @@
       href="https://linktr.ee/ums2?fbclid=PAZXh0bgNhZW0CMTEAAafZk4XTjFNQ8O8244JzJIZJdFOq9LNE65E1q_XKm7aMLe3XkBQSueZQ9BZtsQ_aem_FlvnKwT2676CrmEqiCKvdg"
       target="_blank" class="a2">UMs<sup>2</sup> Linktree</a>
   <h1 style="text-align:center;">Photo Album</h1>
+
+
+
+<h2 style = "text-align:center;">Drop-In Event</h2>
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="Images/IMG_2492.png" style="width: 100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="Images/IMG_7433.webp" style="width: 100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="Images/IMG_7437.webp" style="width: 100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="Images/IMG_7435.webp" style="width: 100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="Images/IMG_7436.webp" style="width: 100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="Images/IMG_7438.webp" style="width: 100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+
+
   
   <br>
   <br>
